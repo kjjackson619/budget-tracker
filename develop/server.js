@@ -11,6 +11,7 @@ const app = express();
 app.use(logger("dev"));
 
 app.use(compression());
+app.use(logger('morgan'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
