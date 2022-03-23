@@ -38,7 +38,7 @@ function uploadTransaction() {
         if (getAll.result.length > 0) {
             fetch('/api/transaction', {
                 method: 'POST',
-                body: JSON.stringify(getAll.results),
+                body: JSON.stringify(getAll.result),
                 headers: {
                     Accept: 'application/json, text/plain, */*',
                     'Content-Type': 'application/json'
@@ -50,7 +50,7 @@ function uploadTransaction() {
                         throw new Error(serverResponse);
                     }
 
-                    const transaction = db.transaction(['new_tranasction'], 'readwrite');
+                    const transaction = db.transaction(['new_transaction'], 'readwrite');
 
                     const transactionObjectStore = transaction.objectStore('new_transaction');
 
