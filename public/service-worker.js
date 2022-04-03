@@ -3,7 +3,7 @@ const FILES_TO_CACHE = [
     "../models/transaction.js",
     "../public/css/styles.css",
     "../routes/api.js",
-    "../public/index.html",
+    "/index.html",
     "./js/idb.js",
     "../server.js"
 ];
